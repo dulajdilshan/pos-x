@@ -14,7 +14,13 @@ class CreateSuppliersTable extends Migration
     public function up()
     {
         Schema::create('suppliers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->string('name');
+            $table->string('phone');
+            $table->text('address');
+            $table->string('bank_name');
+            $table->string('bank_branch');
+            $table->string('bank_acc_no');
             $table->timestamps();
         });
     }
