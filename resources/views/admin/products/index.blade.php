@@ -14,12 +14,12 @@
         {{ trans('global.product.title_singular') }} {{ trans('global.list') }}
     </div>
 
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class=" table table-bordered table-striped table-hover datatable">
-                <thead>
-                    <tr>
-                        <th width="10">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class=" table table-bordered table-striped table-hover datatable">
+                    <thead>
+                        <tr>
+                            <th width="10">
 
                         </th>
                         <th>

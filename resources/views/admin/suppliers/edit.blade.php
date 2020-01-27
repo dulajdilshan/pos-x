@@ -18,7 +18,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($suppliers as $key => $supplier)
+                    @foreach($supplier as $key => $supplier)
                         <tr data-entry-id="{{ $supplier->id }}">
                             <td></td>
                             <td>{{ $supplier->name ?? '' }}</td>
