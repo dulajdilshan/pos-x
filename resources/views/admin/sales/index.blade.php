@@ -264,6 +264,8 @@
         </div>
     </div>
 
+@section('scripts')
+@parent
 <!-- jQuery import library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      
 
@@ -289,5 +291,5 @@ $(document).ready(function(){
 
 
    
-
+@endsection
 @endsection
