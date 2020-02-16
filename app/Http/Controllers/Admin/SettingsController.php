@@ -14,7 +14,7 @@ class SettingsController extends Controller
      */
     public function index()
     {
-        return view('admin.sales.index');
+        return view('admin.settings.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class SettingsController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

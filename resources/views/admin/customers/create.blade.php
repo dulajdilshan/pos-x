@@ -2,17 +2,17 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            Customers
+            Add Customer
         </div>
 
         <div class="card-body">
-{{--                     Body of the page (Card)--}}
+            {{--                     Body of the page (Card)--}}
         </div>
     </div>
-    @section('scripts')
+@section('scripts')
     @parent
-        <script>
-            // Put here your Javascript code
-        </script>
-    @endsection
+    <script>
+        // Put here your Javascript code
+    </script>
+@endsection
 @endsection

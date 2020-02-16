@@ -14,7 +14,7 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        return view('admin.sales.index');
+        return view('admin.customers.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class CustomersController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.customers.create');
     }
 
     /**
