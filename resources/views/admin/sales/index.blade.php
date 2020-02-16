@@ -55,6 +55,18 @@
            <section class=inputs>
                 <div class="row">
                     <div class="col-md-4">
+                       
+                        <div class="row">
+                            <div class="col-md-6 control-label">
+                                <lable for="itemCode" style="font-weight:bold; font-size:28px; color:#2ECC71; font-family: Arial, Helvetica, sans-serif;">Bill No</lable>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="billNo"></input>
+                            </div>
+                            
+                        </div>
+                        </br>
+                            </br>
                         <div class="row">
                             <div class="col-md-6 control-label">
                                 <lable for="itemCode" style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item Code</lable>
@@ -64,8 +76,9 @@
                             </div>
                             
                         </div>
+
                         </br>
-                        </br>
+                        
                         
                         <div class="row">
                             <div class="col-md-6 control-label">
@@ -251,7 +264,30 @@
         </div>
     </div>
 
+<!-- jQuery import library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      
+
+<script>
+
+$(document).ready(function(){
+
+
+        $("payAmount").keyup(function(){
+
+            var num1=$("totalAmount").val();
+            alert(num1);
+            var num2=$("payAmount").val();
+            var num3=parseInt(num2) - parseInt(num1);
+
+            $("balance").val(num3);
+
+        });
+});
     
+    
+</script>
+
+
    
 
 @endsection
