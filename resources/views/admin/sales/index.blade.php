@@ -237,13 +237,13 @@
 
                         <div class=" row col-sm-4 ">
                             <div class="col-md-6" style="">
-                                <button type="button" class="btn btn-success waves-effect waves-light">
+                                <button id="printBtn" type="button" class="btn btn-success waves-effect waves-light">
                                     <i class="fas fa-print fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Print</span>
                                 </button> 
                             </div> 
                             <div class="col-md-6" style="">
-                                <button type="button" class="btn btn-danger waves-effect waves-light">
+                                <button id="clearBtn" type="button" class="btn btn-danger waves-effect waves-light">
                                     <i class="fas fa-times-circle fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Clear</span>
                                 </button> 
@@ -264,6 +264,8 @@
         </div>
     </div>
 
+@section('scripts')
+@parent
 <!-- jQuery import library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      
 
@@ -289,5 +291,5 @@ $(document).ready(function(){
 
 
    
-
+@endsection
 @endsection
