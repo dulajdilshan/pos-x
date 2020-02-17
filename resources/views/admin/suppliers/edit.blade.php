@@ -8,7 +8,7 @@
         </div>
         {{--                        TODO:Add back button--}}
         <div class="card-body">
-            <form action="{{ route("admin.users.update", [$user->id]) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route("admin.supplier.update", [$supplier->id]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <table class="table table-bordered table-striped">

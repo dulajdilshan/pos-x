@@ -1,5 +1,12 @@
 @extends('layouts.admin')
 @section('content')
+    <div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12">
+            <a class="btn btn-success" href="{{ route("admin.suppliers.create") }}">
+                Add Supplier
+            </a>
+        </div>
+    </div>
     <div class="card">
         <div class="card-header">
             Supplier List
