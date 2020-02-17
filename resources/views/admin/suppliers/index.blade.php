@@ -10,7 +10,7 @@
                 <table class=" table table-bordered table-striped table-hover datatable">
                     <thead>
                     <tr>
-                        <th width="10"></th>
+                        <th width="10">Id</th>
                         <th>Supplier Name</th>
                         <th>Address</th>
                         <th>Phone</th>
@@ -20,7 +20,7 @@
                     <tbody>
                     @foreach($suppliers as $key => $supplier)
                         <tr data-entry-id="{{ $supplier->id }}">
-                            <td></td>
+                            <td>{{$supplier->id}}</td>
                             <td>{{ $supplier->name ?? '' }}</td>
                             <td>{{ $supplier->address ?? '' }}</td>
                             <td>{{ $supplier->phone ?? '' }}</td>

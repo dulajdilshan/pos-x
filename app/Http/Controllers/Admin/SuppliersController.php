@@ -18,12 +18,14 @@ class SuppliersController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.suppliers.create');
     }
 
     public function store(Request $request)
     {
-        //
+        $supplier = Supplier::create($request->all());
+
+        return redirect()->route('admin.suppliers.index');
     }
 
     public function show(Supplier $supplier)
