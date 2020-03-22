@@ -1,57 +1,57 @@
 @extends('layouts.admin')
 @section('content')
-<lable for="addsupplierLbl" style="font-weight:bold; font-size:25px; color:#16A085;"><i class="fas fa-edit" ></i> EDIT SUPPLIER</lable>
+<label for="addsupplierLbl" style="font-weight:bold; font-size:25px; color:#16A085;"><i class="fas fa-edit" ></i> EDIT SUPPLIER</label>
 &nbsp;&nbsp;<i class="fas fa-person-carry fa-2x" style="color:#AED6F1"></i> &nbsp;<i class="fas fa-person-carry fa-2x" style="color:#F1948A"></i>
 
 <div class="card" style="margin-top: 20px;">
     <div class="card-header">
-    </br>
+    <br>
         <section class="inputs">
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for="supplierCode" style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Supplier Code</lable>
+                            <label for="supplierCode" style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Supplier Code</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="supplierCode"></input>
+                            <input type="text" class="form-control" id="supplierCode" />
                         </div>
                     </div>
-                    </br>
+                    <br>
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for="" style="font-weight:bold; font-size:17; color:#16A085;">Supplier/Company Name</lable>
+                            <label for="supplierName" style="font-weight:bold; font-size:17px; color:#16A085;">Supplier/Company Name</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="supplierName"></input>
+                            <input type="text" class="form-control" id="supplierName" />
                         </div>
                     </div>
-                    </br>
+                    <br>
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for=" " style="font-weight:bold; font-size:17; color:#16A085;">Supplier/Company Contact No</lable>
+                            <label for="supplierContact" style="font-weight:bold; font-size:17px; color:#16A085;">Supplier/Company Contact No</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="supplierContact"></input>
+                            <input type="text" class="form-control" id="supplierContact" />
                         </div>
                     </div>
-                  
-                    </br>
+
+                    <br>
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for="" style="font-weight:bold; font-size:17; color:#16A085;">Supplier/Company Adress</lable>
+                            <label for="companyAdress" style="font-weight:bold; font-size:17px; color:#16A085;">Supplier/Company Adress</label>
                         </div>
                         <div class="col-md-6">
                             <textarea class="form-control" id="companyAdress" rows="1" ></textarea>
                         </div>
                     </div>
-                    </br>
+                    <br>
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for="" style="font-weight:bold; font-size:17; color:#16A085;">Supplier/Company E-Mail</lable>
+                            <label for="supplierEmail" style="font-weight:bold; font-size:17px; color:#16A085;">Supplier/Company E-Mail</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="supplierEmail"></input>
+                            <input type="text" class="form-control" id="supplierEmail" />
                         </div>
                     </div>
                 </div>
@@ -59,38 +59,39 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for="supplierCode" style="font-weight:bold; font-size:17; color:#16A085;">Supplier Bank Name</lable>
+                            <label for="supplierBank" style="font-weight:bold; font-size:17px; color:#16A085;">Supplier Bank Name</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="supplierBank"></input>
+                            <input type="text" class="form-control" id="supplierBank" />
                         </div>
                     </div>
-                    </br>
+                    <br>
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for="supplierCode" style="font-weight:bold; font-size:17; color:#16A085;">Bank  Branch</lable>
+                            <label for="bankBranch" style="font-weight:bold; font-size:17px; color:#16A085;">Bank  Branch</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="bankBranch"></input>
+                            <input type="text" class="form-control" id="bankBranch" />
                         </div>
                     </div>
-                    </br>
+                    <br>
                     <div class="row">
                         <div class="col-md-6 control-label">
-                            <lable for="supplierCode" style="font-weight:bold; font-size:17; color:#16A085;">Bank Acc.No</lable>
+                            <label for="supplierBankAccNo" style="font-weight:bold; font-size:17px; color:#16A085;">Bank Acc.No</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="supplierBankAccNo"></input>
+                            <input type="text" class="form-control" id="supplierBankAccNo" />
                         </div>
                     </div>
-                    </br>
-                    </br>
-                    </br>
-                    </br>
-                    </br>
-                    </br>
 
-                    
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                         <div class="row " style="margin-left: 270px;">
                             <button id="saveBtn" type="button" class="btn btn-success waves-effect waves-light">
                                 <i class="fas fa-plus-circle fa-2x" ></i>
@@ -102,7 +103,7 @@
                                 <span class="m-l-10" style="font-weight:bold; font-size:25px;"> ClOSE</span>
                             </button>
                         </div>
-                    
+
                 </div>
             </div>
         </section>
