@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\MassDestroySupplierRequest;
 use App\Http\Requests\UpdateSupplierRequest;
 use App\Supplier;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,6 +16,7 @@ class SuppliersController extends Controller
         $suppliers = Supplier::all();
 
         return view('admin.suppliers.index', compact('suppliers'));
+//        return response($suppliers[0]->name, 200);
     }
 
     public function create()
@@ -23,8 +26,11 @@ class SuppliersController extends Controller
 
     public function store(Request $request)
     {
-        $supplier = Supplier::create($request->all());
-
+        try {
+            $supplier = Supplier::create($request->all());
+        } catch (QueryException $error) {
+            return view('admin.suppliers.create', compact('error'));
+        }
         return redirect()->route('admin.suppliers.index');
     }
 
@@ -40,8 +46,11 @@ class SuppliersController extends Controller
 
     public function update(UpdateSupplierRequest $request, Supplier $supplier)
     {
-        $supplier->update($request->all());
-
+        try {
+            $supplier->update($request->all());
+        } catch (QueryException $error) {
+            return view('admin.suppliers.edit', compact(['supplier', 'error']));
+        }
         return redirect()->route('admin.suppliers.index');
     }
 
@@ -52,7 +61,7 @@ class SuppliersController extends Controller
         return back();
     }
 
-    public function massDestroy(MassDestroyProductRequest $request)
+    public function massDestroy(MassDestroySupplierRequest $request)
     {
         Supplier::whereIn('id', request('ids'))->delete();
 

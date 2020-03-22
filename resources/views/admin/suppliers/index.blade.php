@@ -17,6 +17,7 @@
                 <table class=" table table-bordered table-striped table-hover datatable">
                     <thead>
                     <tr>
+                        <th></th>
                         <th width="10">Id</th>
                         <th>Supplier Name</th>
                         <th>Address</th>
@@ -27,6 +28,7 @@
                     <tbody>
                     @foreach($suppliers as $key => $supplier)
                         <tr data-entry-id="{{ $supplier->id }}">
+                            <td></td>
                             <td>{{$supplier->id}}</td>
                             <td>{{ $supplier->name ?? '' }}</td>
                             <td>{{ $supplier->address ?? '' }}</td>
@@ -51,4 +53,42 @@
             </div>
         </div>
     </div>
+@section('scripts')
+    @parent
+    <script>
+        $(function () {
+            let deleteButtonTrans = 'Delete Selected';
+            let deleteButton = {
+                text: deleteButtonTrans,
+                url: "{{ route('admin.suppliers.massDestroy') }}",
+                className: 'btn-danger',
+                action: function (e, dt, node, config) {
+                    var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
+                        return $(entry).data('entry-id')
+                    });
+
+                    if (ids.length === 0) {
+                        alert('{{ trans('global.datatables.zero_selected') }}')
+
+                        return
+                    }
+
+                    if (confirm('{{ trans('global.areYouSure') }}')) {
+                        $.ajax({
+                            headers: {'x-csrf-token': _token},
+                            method: 'POST',
+                            url: config.url,
+                            data: { ids: ids, _method: 'DELETE' }})
+                            .done(function () { location.reload() })
+                    }
+                }
+            }
+            let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
+            dtButtons.push(deleteButton)
+
+            $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+        })
+
+    </script>
+@endsection
 @endsection
