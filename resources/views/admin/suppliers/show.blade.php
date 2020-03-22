@@ -22,10 +22,27 @@
                 </tr>
                 <tr>
                     <th>
+                        {{--                        {{ trans('global.supplier.fields.name') }}--}}
+                        Supplier Code
+                    </th>
+                    <td>
+                        {{ $supplier->code }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
                          Phone number
                     </th>
                     <td>
                         {!! $supplier->phone !!}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Email
+                    </th>
+                    <td>
+                        {!! $supplier->email !!}
                     </td>
                 </tr>
                 <tr>
