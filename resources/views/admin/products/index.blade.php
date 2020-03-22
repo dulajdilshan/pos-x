@@ -13,19 +13,19 @@
     <div class="card-header">
         {{ trans('global.product.title_singular') }} {{ trans('global.list') }}
     </div>
-    
-    </br>
-    </br>
-    
+
+    <br/>
+    <br/>
+
     <div class="row">
         <div class="col-md-6 offset-sm-1">
             <div class="row">
                 <div class="col-md-6 control-label">
-                    <lable for="itemCode" style="font-weight:bold; font-size:17; color:#16A085;">Select a Main Category</lable>
+                    <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Select a Main Category</label>
                 </div>
                 <div class="col-md-6">
-                    <select id="itemCategory"class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                </div>    
+                    <select id="itemCategory" class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span>
+                </div>
             </div>
         </div>
         <div class="col-md-4">
@@ -33,44 +33,44 @@
                 <i class="fas fa-search fa-2x" ></i>
                 <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Search</span>
             </button>
-        
-            
+
+
         </div>
-        </br>
-        </br>
+        <br/>
+        <br/>
             <div class="col-md-8 offset-md-2">
                 <div class="row">
                     <div class="col-md-3 control-label">
                         <lable for="itemCode" style="font-weight:bold; font-size:14px; color:#85929E ;">Select a Sub Category 1</lable>
                     </div>
                     <div class="col-md-3">
-                        <select id="itemSubCategory1"class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                    </div>    
+                        <select id="itemSubCategory1"class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span>
+                    </div>
                 </div>
-                </br>
+                <br>
                 <div class="row">
                     <div class="col-md-3 control-label">
                         <lable for="itemCode" style="font-weight:bold; font-size:14px; color:#85929E ;">Select a Sub Category 2</lable>
                     </div>
                     <div class="col-md-3">
-                        <select id="itemSubCategory2"class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                    </div>    
+                        <select id="itemSubCategory2"class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span>
+                    </div>
                 </div>
-                </br>
+                <br/>
                 <div class="row">
                     <div class="col-md-3 control-label">
-                        <lable for="itemCode" style="font-weight:bold; font-size:14; color:#85929E ;">Select a Sub Category 3</lable>
+                        <lable for="itemCode" style="font-weight:bold; font-size:14px; color:#85929E ;">Select a Sub Category 3</lable>
                     </div>
                     <div class="col-md-3">
-                        <select id="itemSubCategory3"class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                    </div>    
+                        <select id="itemSubCategory3"class="js-example-data-array select2-hidden-accessible" tabindex="-1" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sqvn-container"><span class="select2-selection__rendered" ></span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span>
+                    </div>
                 </div>
 
-                
+
 
             </div>
 
-        
+
 
     </div>
 
