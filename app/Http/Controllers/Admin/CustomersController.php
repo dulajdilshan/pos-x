@@ -14,7 +14,6 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        //
         //Something
         return view('admin.customers.index');
     }
