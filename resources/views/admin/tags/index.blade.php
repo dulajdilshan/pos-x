@@ -3,7 +3,7 @@
 @can('role_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route("admin.roles.create") }}">
+            <a class="btn btn-success" href="{{ route("admin.tags.create") }}">
                 Add Tag
             </a>
         </div>
@@ -45,7 +45,7 @@
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.roles.massDestroy') }}",
+    url: "{{ route('admin.tags.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
@@ -69,9 +69,9 @@
     }
   }
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('role_delete')
+
   dtButtons.push(deleteButton)
-@endcan
+
 
   $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })
 })
