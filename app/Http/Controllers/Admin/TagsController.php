@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\MassDestroyTagRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -81,5 +82,12 @@ class TagsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function massDestroy(MassDestroyTagRequest $request)
+    {
+        // Tag::whereIn('id', request('ids'))->delete();
+
+        return response(null, 204);
     }
 }
