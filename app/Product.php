@@ -23,4 +23,9 @@ class Product extends Model
         'deleted_at',
         'description',
     ];
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }
