@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 @section('content')
-    <lable for="addItemLbl" style="font-weight:bold; font-size:25px; color:#16A085;"><i class="fas fa-edit"></i> EDIT
+    <label for="addItemLbl" style="font-weight:bold; font-size:25px; color:#16A085;"><i class="fas fa-edit"></i> EDIT
         ITEM
-    </lable>
+    </label>
     &nbsp;&nbsp;<i class="fas fa-tshirt fa-2x" style="color:#AED6F1"></i> &nbsp;<i class="fas fa-tshirt fa-2x"
                                                                                    style="color:#F1948A"></i>
 
