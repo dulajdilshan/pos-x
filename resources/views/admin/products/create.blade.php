@@ -13,12 +13,10 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemCode"
-                                       style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item
-                                    Code</label>
+                                <label for="itemCode" style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item Code</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="itemCode"/>
+                                <input type="text" class="form-control" id="itemCode" name="itemCode"/>
                             </div>
                         </div>
                         <br>
@@ -28,7 +26,7 @@
                                     Name</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="itemName"/>
+                                <input type="text" class="form-control" id="itemName" name="itemName"/>
                             </div>
                         </div>
                         <br>
@@ -38,7 +36,7 @@
                                     Main Category</label>
                             </div>
                             <div class="col-md-6">
-                                <select id="itemCategory" class="js-example-data-array select2-hidden-accessible"
+                                <select id="itemCategory" name="itemCategory" class="js-example-data-array select2-hidden-accessible"
                                         tabindex="-1" aria-hidden="true"></select><span
                                     class="select2 select2-container select2-container--default" dir="ltr"
                                     style="width: auto;"><span class="selection"><span
