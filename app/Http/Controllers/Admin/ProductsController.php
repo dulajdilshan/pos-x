@@ -7,6 +7,7 @@ use App\Http\Requests\MassDestroyProductRequest;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Product;
+use App\Supplier;
 
 class ProductsController extends Controller
 {
@@ -23,7 +24,9 @@ class ProductsController extends Controller
     {
         abort_unless(\Gate::allows('product_create'), 403);
 
-        return view('admin.products.create');
+        $suppliers = Supplier::all();
+
+        return view('admin.products.create', compact('suppliers'));
     }
 
     public function store(StoreProductRequest $request)
