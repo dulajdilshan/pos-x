@@ -13,7 +13,9 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemCode" style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item Code</label>
+                                <label for="itemCode"
+                                       style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item
+                                    Code</label>
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="itemCode" name="itemCode"/>
@@ -32,11 +34,13 @@
                         <br>
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemMainCat" style="font-weight:bold; font-size:17px; color:#16A085;">Select a
+                                <label for="itemMainCat" style="font-weight:bold; font-size:17px; color:#16A085;">Select
+                                    a
                                     Main Category</label>
                             </div>
                             <div class="col-md-6">
-                                <select id="itemCategory" name="itemCategory" class="js-example-data-array select2-hidden-accessible"
+                                <select id="itemCategory" name="itemCategory"
+                                        class="js-example-data-array select2-hidden-accessible"
                                         tabindex="-1" aria-hidden="true"></select><span
                                     class="select2 select2-container select2-container--default" dir="ltr"
                                     style="width: auto;"><span class="selection"><span
