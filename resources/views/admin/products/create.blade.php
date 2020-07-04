@@ -103,7 +103,7 @@
                                         <option>One</option>
                                         <option>Two</option>
                                     </span>
-                                        
+
                                 </div>
                             </div>
                         </div>
@@ -138,24 +138,28 @@
                                 <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Suplier Name</label>
                             </div>
                             <div class="col-md-6">
-                                <select id="suplierName" class="js-example-data-array select2-hidden-accessible"
+                                <select name="supplierName" id="supplierName" class="js-example-data-array select2-hidden-accessible"
                                         tabindex="-1" aria-hidden="true">
-                                        
+
                                 </select>
                                 <span
                                     class="select2 select2-container select2-container--default" dir="ltr"
                                     style="width: auto;">
-                                    <option>One</option>
-                                    <option>Two</option>
-                                    
+                                    @foreach($suppliers as $key => $supplier)
+                                        <option value="{{ $key }}">{{ $supplier->name}}</option>
+                                        @if ($key == old('supplierName', $model->option))
+                                            selected="selected"
+                                        @endif
+                                    @endforeach
+
                                 </span>
-                                
-                            </div>
+
+                            </div>l
                         </div>
                         <br>
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Suplier
+                                <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Supplier
                                     Code</label>
                             </div>
                             <div class="col-md-6">
