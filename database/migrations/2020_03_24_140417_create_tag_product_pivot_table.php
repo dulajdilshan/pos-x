@@ -16,7 +16,7 @@ class CreateTagProductPivotTable extends Migration
         Schema::create('tag_product', function (Blueprint $table) {
             $table->unsignedInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');
-            $table->unsignedInteger('role_id');
+            $table->unsignedInteger('tag_id');
             $table->foreign('tag_id')->references('id')->on('tags');
         });
     }
