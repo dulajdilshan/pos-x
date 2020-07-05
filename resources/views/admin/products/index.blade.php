@@ -67,6 +67,9 @@
                             No
                         </th>
                         <th>
+                            No
+                        </th>
+                        <th>
                             {{ trans('global.product.fields.name') }}
                         </th>
                         <th>

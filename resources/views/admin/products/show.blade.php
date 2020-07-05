@@ -140,7 +140,7 @@
                                         <option>One</option>
                                         <option>Two</option>
                                     </span>
-                                        
+
                                 </div>
                             </div>
                         </div>
@@ -177,16 +177,16 @@
                             <div class="col-md-6">
                                 <select id="suplierName" class="js-example-data-array select2-hidden-accessible"
                                         tabindex="-1" aria-hidden="true" disabled>
-                                        
+
                                 </select>
                                 <span
                                     class="select2 select2-container select2-container--default" dir="ltr"
                                     style="width: auto;">
                                     <option>One</option>
                                     <option>Two</option>
-                                    
+
                                 </span>
-                                
+
                             </div>
                         </div>
                         <br>
@@ -228,7 +228,7 @@
 
         </div>
 
-    
+
 
 </div>
 
