@@ -6,8 +6,9 @@
         </div>
 
         <div class="card-body">
-            <form action="{{ route('admin.tags.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.tags.update', [$tag->id]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                     <label for="name">Name*</label>
                     <input type="text" id="name" name="name" class="form-control"
