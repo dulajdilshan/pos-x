@@ -7,8 +7,8 @@
 
     <div class="card" style="margin-top: 20px;">
         <form class="card-header"
-{{--              action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">--}}
-{{--            @csrf--}}
+              action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <br>
             <section class="inputs">
                 <div class="row">
