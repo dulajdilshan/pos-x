@@ -147,14 +147,14 @@
                                     style="width: auto;">
                                     @foreach($suppliers as $key => $supplier)
                                         <option value="{{ $key }}">{{ $supplier->name}}</option>
-                                        @if ($key == old('supplierName', $model->option))
+                                        @if ($key == old('supplierName', $supplier->id))
                                             selected="selected"
                                         @endif
                                     @endforeach
 
                                 </span>
 
-                            </div>l
+                            </div>
                         </div>
                         <br>
                         <div class="row">
@@ -163,7 +163,7 @@
                                     Code</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="suplierCode"/>
+                                <input type="text" class="form-control" id="supplierCode"/>
                             </div>
                             <br>
                             <br>
