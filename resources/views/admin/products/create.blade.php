@@ -13,12 +13,10 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemCode"
-                                       style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item
-                                    Code</label>
+                                <label for="itemCode" style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item Code</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="itemCode"/>
+                                <input type="text" class="form-control" id="itemCode" name="itemCode"/>
                             </div>
                         </div>
                         <br>
@@ -28,7 +26,7 @@
                                     Name</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="itemName"/>
+                                <input type="text" class="form-control" id="itemName" name="itemName"/>
                             </div>
                         </div>
                         <br>
@@ -38,17 +36,15 @@
                                     Main Category</label>
                             </div>
                             <div class="col-md-6">
-                                <select id="itemCategory" class="js-example-data-array select2-hidden-accessible"
-                                        tabindex="-1" aria-hidden="true"></select><span
+                                <select id="itemCategory" name="itemCategory" class="js-example-data-array select2-hidden-accessible"
+                                    tabindex="-1" aria-hidden="true">
+                                </select>
+                                <span
                                     class="select2 select2-container select2-container--default" dir="ltr"
-                                    style="width: auto;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" role="combobox"
-                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-labelledby="select2-sqvn-container"><span
-                                                class="select2-selection__rendered"></span></span><span
-                                            class="select2-selection__arrow" role="presentation"><b
-                                                role="presentation"></b></span></span></span><span
-                                    class="dropdown-wrapper" aria-hidden="true"></span>
+                                    style="width: auto;">
+                                    <option>One</option>
+                                    <option>Two</option>
+                                </span>
                             </div>
                         </div>
                         <br>
@@ -61,16 +57,14 @@
                                 <div class="col-md-6">
                                     <select id="itemSubCategory1"
                                             class="js-example-data-array select2-hidden-accessible" tabindex="-1"
-                                            aria-hidden="true"></select><span
+                                            aria-hidden="true">
+                                    </select>
+                                    <span
                                         class="select2 select2-container select2-container--default" dir="ltr"
-                                        style="width: auto;"><span class="selection"><span
-                                                class="select2-selection select2-selection--single" role="combobox"
-                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                                aria-labelledby="select2-sqvn-container"><span
-                                                    class="select2-selection__rendered"></span></span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span>
+                                        style="width: auto;">
+                                        <option>One</option>
+                                        <option>Two</option>
+                                    </span>
                                 </div>
                             </div>
                             <br>
@@ -82,16 +76,14 @@
                                 <div class="col-md-6">
                                     <select id="itemSubCategory2"
                                             class="js-example-data-array select2-hidden-accessible" tabindex="-1"
-                                            aria-hidden="true"></select><span
+                                            aria-hidden="true">
+                                    </select>
+                                    <span
                                         class="select2 select2-container select2-container--default" dir="ltr"
-                                        style="width: auto;"><span class="selection"><span
-                                                class="select2-selection select2-selection--single" role="combobox"
-                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                                aria-labelledby="select2-sqvn-container"><span
-                                                    class="select2-selection__rendered"></span></span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span>
+                                        style="width: auto;">
+                                        <option>One</option>
+                                        <option>Two</option>
+                                    </span>
                                 </div>
                             </div>
                             <br>
@@ -103,16 +95,15 @@
                                 <div class="col-md-6">
                                     <select id="itemSubCategory3"
                                             class="js-example-data-array select2-hidden-accessible" tabindex="-1"
-                                            aria-hidden="true"></select><span
+                                            aria-hidden="true">
+                                    </select>
+                                    <span
                                         class="select2 select2-container select2-container--default" dir="ltr"
-                                        style="width: auto;"><span class="selection"><span
-                                                class="select2-selection select2-selection--single" role="combobox"
-                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                                aria-labelledby="select2-sqvn-container"><span
-                                                    class="select2-selection__rendered"></span></span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span>
+                                        style="width: auto;">
+                                        <option>One</option>
+                                        <option>Two</option>
+                                    </span>
+
                                 </div>
                             </div>
                         </div>
@@ -144,31 +135,35 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Suplier
-                                    Name</label>
+                                <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Suplier Name</label>
                             </div>
                             <div class="col-md-6">
-                                <select id="suplierName" class="js-example-data-array select2-hidden-accessible"
-                                        tabindex="-1" aria-hidden="true"></select><span
+                                <select name="supplierName" id="supplierName" class="js-example-data-array select2-hidden-accessible"
+                                        tabindex="-1" aria-hidden="true">
+
+                                </select>
+                                <span
                                     class="select2 select2-container select2-container--default" dir="ltr"
-                                    style="width: auto;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" role="combobox"
-                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-labelledby="select2-sqvn-container"><span
-                                                class="select2-selection__rendered"></span></span><span
-                                            class="select2-selection__arrow" role="presentation"><b
-                                                role="presentation"></b></span></span></span><span
-                                    class="dropdown-wrapper" aria-hidden="true"></span>
+                                    style="width: auto;">
+                                    @foreach($suppliers as $key => $supplier)
+                                        <option value="{{ $key }}">{{ $supplier->name}}</option>
+                                        @if ($key == old('supplierName', $supplier->id))
+                                            selected="selected"
+                                        @endif
+                                    @endforeach
+
+                                </span>
+
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Suplier
+                                <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Supplier
                                     Code</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="suplierCode"/>
+                                <input type="text" class="form-control" id="supplierCode"/>
                             </div>
                             <br>
                             <br>

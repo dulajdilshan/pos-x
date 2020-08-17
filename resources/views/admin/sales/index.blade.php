@@ -7,7 +7,7 @@
         background: #f5f5f5;
 		font-family: 'Roboto', sans-serif;
 	}
-	
+
     table.table tr th, table.table tr td {
         border-color: #e9e9e9;
     }
@@ -35,17 +35,17 @@
     }
     table.table td i {
         font-size: 19px;
-    }    
+    }
     .pagination {
         float: right;
         margin: 0 0 5px;
     }
-    
+
     .hint-text {
         float: left;
         margin-top: 6px;
         font-size: 95%;
-    }    
+    }
 </style>
 
 
@@ -55,7 +55,7 @@
            <section class=inputs>
                 <div class="row">
                     <div class="col-md-4">
-                       
+
                         <div class="row">
                             <div class="col-md-6 control-label">
                                 <lable for="itemCode" style="font-weight:bold; font-size:28px; color:#2ECC71; font-family: Arial, Helvetica, sans-serif;">Bill No</lable>
@@ -63,7 +63,7 @@
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="billNo"></input>
                             </div>
-                            
+
                         </div>
                         </br>
                             </br>
@@ -74,27 +74,27 @@
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="itemCode"></input>
                             </div>
-                            
+
                         </div>
 
                         </br>
-                        
-                        
+
+
                         <div class="row">
                             <div class="col-md-6 control-label">
                                 <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#85929E;">Item Name</lable>
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="itemName"></input>
-                            </div>    
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#85929E;">Item Category</lable>
+                                <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#85929E;">Item Tags</lable>
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="itemCat"></input>
-                            </div>    
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 control-label">
@@ -102,7 +102,7 @@
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" id="discount"></input>
-                            </div>    
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 control-label">
@@ -110,7 +110,7 @@
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" id="unitPrice"></input>
-                            </div>    
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 control-label">
@@ -118,7 +118,7 @@
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control" id="itemQty"></input>
-                            </div>    
+                            </div>
                         </div>
 
                         </br>
@@ -132,8 +132,8 @@
                             <i class="fas fa-redo-alt fa-2x" ></i>
                             <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Refresh</span>
                         </button>
-                        
-                        
+
+
                     </div>
 
                     <div class="col-md-8">
@@ -148,7 +148,7 @@
                                     <th style="color:#F97985;">Unit Price</th>
                                     <th style="color:#F97985;">Discount</th>
                                     <th style="color:#F97985;">Price </th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody style="overflow-y: auto;">
@@ -162,7 +162,7 @@
                                     <td>500</td>
                                     <td>50</td>
                                     <td>450</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>
@@ -174,7 +174,7 @@
                                     <td>400</td>
                                     <td>50</td>
                                     <td>350</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>
@@ -186,23 +186,23 @@
                                     <td>300</td>
                                     <td>50</td>
                                     <td>250</td>
-                                    
+
                                 </tr>
-                                
+
                             </tbody>
                         </table>
 
                         </br>
                         </br>
 
-                        
+
                         <div class="row col-md-10 offset-md-4" style="">
                             <div class="col-sm-4 control-label">
                                 <lable for="itemCode" style="font-weight:bold; font-size:20px; color:#F97985;">Total Amount</lable>
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="totalAmount"></input>
-                            </div>    
+                            </div>
                         </div>
                         </br>
                         <div class="row col-md-10 offset-md-4" style="">
@@ -211,7 +211,7 @@
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="payAmount"></input>
-                            </div>    
+                            </div>
                         </div>
                         </br>
                         <div class="row col-md-10 offset-md-4" style="">
@@ -220,13 +220,13 @@
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" id="balance"></input>
-                            </div>    
+                            </div>
                         </div>
                         </br>
                         </br>
                         </br>
-                        
-                        
+
+
 
 
                     </div>
@@ -240,26 +240,26 @@
                                 <button id="printBtn" type="button" class="btn btn-success waves-effect waves-light">
                                     <i class="fas fa-print fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Print</span>
-                                </button> 
-                            </div> 
+                                </button>
+                            </div>
                             <div class="col-md-6" style="">
                                 <button id="clearBtn" type="button" class="btn btn-danger waves-effect waves-light">
                                     <i class="fas fa-times-circle fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Clear</span>
-                                </button> 
-                            </div>    
+                                </button>
+                            </div>
                         </div>
-                        
 
-                        
-                        
-                        
+
+
+
+
                     </div>
 
-                    
-                    
+
+
                 </div>
-             
+
            </section>
         </div>
     </div>
@@ -267,7 +267,7 @@
 @section('scripts')
 @parent
 <!-- jQuery import library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
 
@@ -285,11 +285,11 @@ $(document).ready(function(){
 
         });
 });
-    
-    
+
+
 </script>
 
 
-   
+
 @endsection
 @endsection

@@ -33,6 +33,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('suppliers', 'SuppliersController');
 
+    Route::delete('tags/destroy', 'TagsController@massDestroy')->name('tags.massDestroy');
+
     Route::resource('tags', 'TagsController');
 
     Route::resource('reports', 'ReportsController');

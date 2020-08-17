@@ -10,4 +10,6 @@ Route::group(['prefix' => 'v1', 'as' => 'admin.', 'namespace' => 'Api\V1\Admin']
     Route::apiResource('products', 'ProductsApiController');
 
     Route::apiResource('suppliers', 'SuppliersApiController');
+
+    Route::apiResource('tags', 'TagsApiController');
 });
