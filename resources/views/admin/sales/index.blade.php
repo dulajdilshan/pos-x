@@ -7,7 +7,7 @@
         background: #f5f5f5;
 		font-family: 'Roboto', sans-serif;
 	}
-	
+
     table.table tr th, table.table tr td {
         border-color: #e9e9e9;
     }
@@ -35,34 +35,34 @@
     }
     table.table td i {
         font-size: 19px;
-    }    
+    }
     .pagination {
         float: right;
         margin: 0 0 5px;
     }
-    
+
     .hint-text {
         float: left;
         margin-top: 6px;
         font-size: 95%;
-    }   
+    }
 
     .card-inputs {
-    
+
     background-color: #cadee3;
-    
-    } 
+
+    }
 
     .card-table {
-    
+
     background-color: #e8c3d9;
-    
-    } 
+
+    }
     .card-billing {
-    
+
     background-color: #cadee3;
-    
-    } 
+
+    }
 
     /* table */
     /* tr {
@@ -88,7 +88,7 @@
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="billNo"></input>
                                     </div>
-                                    
+
                                 </div>
                                 </br>
                                 </br>
@@ -99,7 +99,7 @@
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemCode"></input>
                                     </div>
-                                    
+
                                 </div>
                                 </br>
                                 <div class="row">
@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemName"></input>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
@@ -116,7 +116,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemCat"></input>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
@@ -124,7 +124,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <input type="text" class="form-control" id="discount"></input>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
@@ -132,7 +132,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <input type="text" class="form-control" id="unitPrice"></input>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
@@ -140,7 +140,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <input type="text" class="form-control" id="itemQty"></input>
-                                    </div>    
+                                    </div>
                                 </div>
 
                                 </br>
@@ -154,9 +154,9 @@
                                     <i class="fas fa-redo-alt fa-2x" style="color:white" ></i>
                                     <span class="m-l-10" style="font-weight:bold; color:white; font-size:25px;"> Refresh</span>
                                 </button>
-                            </div>    
+                            </div>
                         </div>
-                        
+
                     </div>
 
                     <div class="col-md-8">
@@ -171,7 +171,6 @@
                                         <th style="color:#F97985;">Unit Price</th>
                                         <th style="color:#F97985;">Discount</th>
                                         <th style="color:#F97985;">Price </th>
-                                        
                                     </tr>
                                 </thead>
                                 <tbody style="overflow-y: auto;">
@@ -185,7 +184,6 @@
                                         <td>500</td>
                                         <td>50</td>
                                         <td>450</td>
-                                        
                                     </tr>
                                     <tr>
                                         <td>
@@ -197,7 +195,7 @@
                                         <td>400</td>
                                         <td>50</td>
                                         <td>350</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td>
@@ -209,7 +207,7 @@
                                         <td>300</td>
                                         <td>50</td>
                                         <td>250</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td>
@@ -221,16 +219,16 @@
                                         <td>3000</td>
                                         <td>500</td>
                                         <td>2500</td>
-                                        
+
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
                         </div>
                         </br>
                         </br>
 
-                        
+
                         <div class="card card-billing" style="margin-top:-30px; " >
                             <div class="row" style="margin: 10px 10px 10px 10px;">
                                 <div class="row col-md-10 offset-md-4" style="">
@@ -239,7 +237,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="totalDiscount"></input>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div class="row col-md-10 offset-md-4" style="margin-top:20px;">
                                     <div class="col-sm-4 control-label">
@@ -247,7 +245,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="totalAmount"></input>
-                                    </div>    
+                                    </div>
                                 </div>
                                 </br>
                                 <div class="row col-md-10 offset-md-4" style="">
@@ -256,7 +254,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="payAmount"></input>
-                                    </div>    
+                                    </div>
                                 </div>
                                 </br>
                                 <div class="row col-md-10 offset-md-4" style="">
@@ -265,14 +263,14 @@
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="balance"></input>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         </br>
-                        
-                        
-                        
+
+
+
 
 
                     </div>
@@ -286,26 +284,26 @@
                                 <button id="printBtn" type="button" class="btn btn-primary waves-effect waves-light" >
                                     <i class="fas fa-print fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Print</span>
-                                </button> 
-                            </div> 
+                                </button>
+                            </div>
                             <div class="col-md-6" style="">
                                 <button id="clearBtn" type="button" class="btn btn-danger waves-effect waves-light">
                                     <i class="fas fa-times-circle fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Clear</span>
-                                </button> 
-                            </div>    
+                                </button>
+                            </div>
                         </div>
-                        
 
-                        
-                        
-                        
+
+
+
+
                     </div>
 
-                    
-                    
+
+
                 </div>
-             
+
            </section>
         </div>
     </div>
@@ -313,7 +311,7 @@
 @section('scripts')
 @parent
 <!-- jQuery import library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
 
@@ -331,11 +329,11 @@ $(document).ready(function(){
 
         });
 });
-    
-    
+
+
 </script>
 
 
-   
+
 @endsection
 @endsection

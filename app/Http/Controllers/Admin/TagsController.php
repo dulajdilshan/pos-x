@@ -62,7 +62,7 @@ class TagsController extends Controller
 
     public function massDestroy(MassDestroyTagRequest $request)
     {
-//         Tag::whereIn('id', request('ids'))->delete();
+         Tag::whereIn('id', request('ids'))->delete();
 
         return response(null, 204);
     }

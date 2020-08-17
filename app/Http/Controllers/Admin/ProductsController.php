@@ -8,6 +8,7 @@ use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Product;
 use App\Supplier;
+use App\Tag;
 
 class ProductsController extends Controller
 {
@@ -25,17 +26,20 @@ class ProductsController extends Controller
         abort_unless(\Gate::allows('product_create'), 403);
 
         $suppliers = Supplier::all();
+        $tags = Tag::all()->pluck('name', 'id');
 
-        return view('admin.products.create', compact('suppliers'));
+//        return view('admin.products.create', compact('suppliers'));
+        return view('admin.products.create2', compact('suppliers', 'tags'));
     }
 
     public function store(StoreProductRequest $request)
     {
-        abort_unless(\Gate::allows('product_create'), 403);
-
-        $product = Product::create($request->all());
-
-        return redirect()->route('admin.products.index');
+//        abort_unless(\Gate::allows('product_create'), 403);
+//
+//        $product = Product::create($request->all());
+//
+//        return redirect()->route('admin.products.index');
+        return $request;
     }
 
     public function edit(Product $product)

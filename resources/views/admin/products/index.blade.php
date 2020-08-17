@@ -10,7 +10,7 @@
         </div>
     @endcan
     <div class="card">
-        <div class="card-header">
+        <div class="card-header" style="font-weight:bold; font-size:17px; color:#7f95ba;">
             {{ trans('global.product.title_singular') }} {{ trans('global.list') }}
         </div>
 
@@ -60,8 +60,14 @@
                 <table class=" table table-bordered table-striped table-hover datatable">
                     <thead>
                     <tr>
-                        <th width="10">
-
+                    <th width="15">
+                            Action
+                        </th>
+                        <th width="08">
+                            No
+                        </th>
+                        <th>
+                            No
                         </th>
                         <th>
                             No
@@ -76,13 +82,16 @@
                             {{ trans('global.product.fields.price') }}
                         </th>
                         <th>
-                            &nbsp;
+                            Price
                         </th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($products as $key => $product)
                         <tr data-entry-id="{{ $product->id }}">
+                            <td>
+                                <a href="#" class="view" title="View" data-toggle="tooltip"><i class="fas fa-eye-alt fa-fw"></i></a>
+                            </td>
                             <td>
 
                             </td>
