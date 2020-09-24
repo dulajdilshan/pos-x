@@ -236,7 +236,7 @@
                                         <lable for="totalDiscount" style="font-weight:bold; font-size:20px; color:#c2b315;">Total Discount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" id="totalDiscount"></input>
+                                        <input type="text" class="form-control " id="totalDiscount"></input>
                                     </div>
                                 </div>
                                 <div class="row col-md-10 offset-md-4" style="margin-top:20px;">
@@ -244,7 +244,7 @@
                                         <lable for="totalAmount" style="font-weight:bold; font-size:20px; color:#F97985;">Total Amount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" id="totalAmount"></input>
+                                        <input type="text" class="form-control " id="totalAmount"></input>
                                     </div>
                                 </div>
                                 </br>
@@ -253,7 +253,7 @@
                                         <lable for="payAmount" style="font-weight:bold; font-size:20px; color:#85929E;">Pay Amount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" id="payAmount"></input>
+                                        <input type="text" class="form-control payment" id="payAmount"></input>
                                     </div>
                                 </div>
                                 </br>
@@ -318,7 +318,7 @@
 $(document).ready(function(){
 
 
-        $("payAmount").keyup(function(){
+        $(".payment").keyup(function(){
 
             var num1=$("totalAmount").val();
             alert(num1);
