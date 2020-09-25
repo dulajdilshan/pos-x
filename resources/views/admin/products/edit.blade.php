@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-6 control-label">
                                 <label for="itemMainCat" style="font-weight:bold; font-size:17px; color:#16A085;">Select a
                                     Main Category</label>
@@ -116,6 +116,18 @@
                                         class="dropdown-wrapper" aria-hidden="true"></span>
                                 </div>
                             </div>
+                        </div> -->
+
+                        <div class="form-group {{ $errors->has('') ? 'has-error' : '' }}">
+                            <div class="col-md-6 control-label">
+                                <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;"> Select Tags</label>
+                                <span class="btn btn-info btn-xs select-all">Select all</span>
+                                <span class="btn btn-info btn-xs deselect-all">Deselect all</span>
+                            </div>
+                            <select name="" id="" class="form-control select2" multiple="multiple">
+                                
+                            </select>
+                            
                         </div>
 
 
