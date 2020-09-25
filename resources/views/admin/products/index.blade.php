@@ -60,16 +60,10 @@
                 <table class=" table table-bordered table-striped table-hover datatable">
                     <thead>
                     <tr>
-                    <th width="15">
+                        <th width="15">
                             Action
                         </th>
                         <th width="08">
-                            No
-                        </th>
-                        <th>
-                            No
-                        </th>
-                        <th>
                             No
                         </th>
                         <th>
