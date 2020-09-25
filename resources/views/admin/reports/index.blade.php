@@ -7,6 +7,7 @@
 
         <div class="card-body">
             {{--                     Body of the page (Card)--}}
+            <h1>This is report page</h1>
         </div>
     </div>
 @section('scripts')
