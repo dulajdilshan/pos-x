@@ -318,14 +318,24 @@
 $(document).ready(function(){
 
 
-        $(".payment").keyup(function(){
+        // $(.payment).keyup(function(){
 
-            var num1=$("totalAmount").val();
-            alert(num1);
-            var num2=$("payAmount").val();
-            var num3=parseInt(num2) - parseInt(num1);
+        //     var num1=$("totalAmount").val();
+        //     alert(num1);
+        //     var num2=$("payAmount").val();
+        //     var num3=parseInt(num2) - parseInt(num1);
 
-            $("balance").val(num3);
+        //     $("balance").val(num3);
+
+        // });
+
+        $('#payAmount').on('keyup', function() {
+            if($.trim(this.value).length) {
+                var balance =parseFloat(this.value).toFixed(2) - parseFloat($('#totalAmount').val()).toFixed(2); 
+                            
+                $('#balance').val(balance);
+            }
+
 
         });
 });
