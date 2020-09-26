@@ -17,8 +17,9 @@ class ProductsController extends Controller
         abort_unless(\Gate::allows('product_access'), 403);
 
         $products = Product::all();
+        $tags = Tag::all()->pluck('name', 'id');
 
-        return view('admin.products.index', compact('products'));
+        return view('admin.products.index', compact('products', 'tags'));
     }
 
     public function create()
