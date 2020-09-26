@@ -138,7 +138,7 @@
                                     Qty</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="itemQty"/>
+                                <input type="number" class="form-control" id="itemQty"/>
                             </div>
                         </div>
                         <br>
@@ -148,7 +148,7 @@
                                     Price</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="unitPrice"/>
+                                <input type="number" class="form-control" id="unitPrice"/>
                             </div>
                         </div>
 
