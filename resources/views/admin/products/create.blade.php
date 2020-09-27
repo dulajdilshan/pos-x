@@ -15,12 +15,12 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 control-label">
-                                <label for="itemCode"
+                                <label for="item_code"
                                        style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item
                                     Code</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="itemCode" name="itemCode"/>
+                                <input type="text" class="form-control" id="item_code" name="item_code"/>
                             </div>
                         </div>
                         <br>
@@ -41,7 +41,7 @@
                                     Qty</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="quantity" name="quantity"/>
+                                <input type="number" class="form-control" id="quantity" name="quantity"/>
                             </div>
                         </div>
                         <br>
@@ -51,7 +51,7 @@
                                     Price</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="unit_price" name="unit_price"/>
+                                <input type="number" class="form-control" id="unit_price" name="unit_price"/>
                             </div>
                         </div>
 
