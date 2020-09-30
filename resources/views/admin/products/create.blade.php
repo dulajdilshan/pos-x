@@ -4,7 +4,13 @@
         ADD NEW ITEM</label>
     &nbsp;&nbsp;<i class="fas fa-tshirt fa-2x" style="color:#AED6F1"></i> &nbsp;<i class="fas fa-tshirt fa-2x"
                                                                                    style="color:#F1948A"></i>
-
+    @if($errors)
+        @foreach($errors as $error)
+            <div class="alert alert-danger" role="alert">
+                {{$error}}
+            </div>
+        @endforeach
+    @endif
     <div class="card" style="margin-top: 20px;">
         <form class="card-header"
               action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
@@ -96,7 +102,8 @@
                         <br>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group {{ $errors->has('tags') ? 'has-error' : '' }}">
+{{--                                <div class="form-group {{ $errors->has('tags') ? 'has-error' : '' }}">--}}
+                                <div class="form-group">
                                     <label for="tags" style="font-weight:bold; font-size:17px; color:#16A085;">
                                         Tags:
                                         <span class="btn btn-info btn-xs deselect-all">Deselect all</span>
@@ -111,11 +118,6 @@
                                             </option>
                                         @endforeach
                                     </select>
-                                    @if($errors->has('tags'))
-                                        <em class="invalid-feedback">
-                                            {{ $errors->first('tags') }}
-                                        </em>
-                                    @endif
                                     <p class="helper-block">
                                         {{ trans('global.role.fields.permissions_helper') }}
                                     </p>
