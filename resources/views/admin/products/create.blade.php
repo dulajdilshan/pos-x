@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 @section('content')
+    <div>
+        <a href="{{route('admin.products.index')}}" type="button" class="btn btn-secondary">
+            <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back
+        </a>
+    </div>
     <label for="addItemLbl" style="font-weight:bold; font-size:25px; color:#16A085;"><i class="fas fa-plus-circle"></i>
         ADD NEW ITEM</label>
     &nbsp;&nbsp;<i class="fas fa-tshirt fa-2x" style="color:#AED6F1"></i> &nbsp;<i class="fas fa-tshirt fa-2x"

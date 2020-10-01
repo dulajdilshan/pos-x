@@ -69,7 +69,10 @@ class ProductsController extends Controller
     {
         abort_unless(\Gate::allows('product_edit'), 403);
 
-        return view('admin.products.edit', compact('product'));
+        $suppliers = Supplier::all();
+        $tags = Tag::all()->pluck('name', 'id');
+
+        return view('admin.products.edit', compact('product','suppliers', 'tags'));
     }
 
     public function update(UpdateProductRequest $request, Product $product)
@@ -84,8 +87,9 @@ class ProductsController extends Controller
     public function show(Product $product)
     {
         abort_unless(\Gate::allows('product_show'), 403);
+        $tags = Tag::all()->pluck('name', 'id');
 
-        return view('admin.products.show', compact('product'));
+        return view('admin.products.show', compact('product', 'tags'));
     }
 
     public function destroy(Product $product)

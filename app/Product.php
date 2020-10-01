@@ -30,4 +30,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Tag::class, 'tag_product');
     }
+
+    public function supplier()
+    {
+        return $this->belongsToMany(Supplier::class, 'product_supplier');
+    }
 }

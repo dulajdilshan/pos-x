@@ -48,9 +48,9 @@
                             </p>
                         </div>
                     </div>
-                    <button id="btnSearch" type="button" class="btn btn-primary waves-effect waves-light">
-                        <i class="fas fa-search fa-x"></i>
-                        <span class="m-l-10" style="font-weight:bold; font-size:14px;"> Search</span>
+                    <button id="btnSearch" type="button" class="btn btn-primary">
+                        <i class="fa fa-search fa"></i>
+{{--                        <span class="m-l-10" style="font-weight:bold; font-size:14px;"> Search</span>--}}
                     </button>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                             Action
                         </th>
                         <th width="08">
-                            No
+                            Code
                         </th>
                         <th>
                             {{ trans('global.product.fields.name') }}
@@ -84,11 +84,14 @@
                         <th>
                             {{ trans('global.product.fields.description') }}
                         </th>
-                        <th>
-                            {{ trans('global.product.fields.price') }}
+                        <th width="10">
+                            Unit Price
+                        </th>
+                        <th width="10">
+                            Quantity
                         </th>
                         <th>
-                            Price
+                            Controllers
                         </th>
                     </tr>
                     </thead>
@@ -100,7 +103,7 @@
                                         class="fas fa-eye-alt fa-fw"></i></a>
                             </td>
                             <td>
-
+                                {{$product->item_code ?? ''}}
                             </td>
                             <td>
                                 {{ $product->name ?? '' }}
@@ -109,7 +112,10 @@
                                 {{ $product->description ?? '' }}
                             </td>
                             <td>
-                                {{ $product->price ?? '' }}
+                                {{ $product->unit_price ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->quantity ?? '' }}
                             </td>
                             <td>
                                 @can('product_show')
