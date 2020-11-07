@@ -63,13 +63,15 @@
     background-color: #cadee3;
 
     }
-
-    /* table */
-    /* tr {
-        line-height: 1px;
-        min-height: 1px;
-        height: 1px;
-        } */
+    .my-custom-scrollbar {
+        position: relative;
+        height: 200px;
+        overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+        display: block;
+    }
+    
 </style>
 
 
@@ -104,7 +106,7 @@
                                 </br>
                                 <div class="row">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#85929E;">Item Name</lable>
+                                        <lable for="itemName" style="font-weight:bold; font-size:15px; color:#85929E;">Item Name</lable>
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemName"></input>
@@ -112,7 +114,7 @@
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#85929E;">Item Category</lable>
+                                        <lable for="itemCat" style="font-weight:bold; font-size:15px; color:#85929E;">Item Tags</lable>
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemCat"></input>
@@ -120,37 +122,38 @@
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#F97985;">Discount</lable>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control" id="discount"></input>
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-top: 10px;">
-                                    <div class="col-md-6 control-label">
                                         <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#F97985;">Unit Price</lable>
                                     </div>
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control" id="unitPrice"></input>
+                                        <input type="number" class="form-control" id="unitPrice"></input>
                                     </div>
                                 </div>
+                                
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
                                         <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#F97985;">Item Qty</lable>
                                     </div>
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control" id="itemQty"></input>
+                                        <input type="number" class="form-control" id="itemQty"></input>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col-md-6 control-label">
+                                        <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#F97985;">Discount</lable>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="number" class="form-control" id="discount"></input>
                                     </div>
                                 </div>
 
                                 </br>
                                 </br>
-                                <button type="button" class="btn btn-success waves-effect waves-light">
+                                <button type="button" id="add-btn" onclick="AddData()" class="btn btn-success waves-effect waves-light">
                                     <i class="fas fa-plus-circle fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Add</span>
                                 </button>
                                 &nbsp; &nbsp; &nbsp;
-                                <button type="button" class="btn btn-warning waves-effect waves-light">
+                                <button type="button" id="refresh-btn" onclick="clearData()" class="btn btn-warning waves-effect waves-light">
                                     <i class="fas fa-redo-alt fa-2x" style="color:white" ></i>
                                     <span class="m-l-10" style="font-weight:bold; color:white; font-size:25px;"> Refresh</span>
                                 </button>
@@ -160,67 +163,33 @@
                     </div>
 
                     <div class="col-md-8">
-                        <div class="card card-table" style="margin-top: 20px;">
-                            <table class="table table-striped table-hover table-bordered" style=" ">
+                        <div class="card card-table table-wrapper-scroll-y my-custom-scrollbar" style="margin-top: 20px;">
+                            <table class="table table-striped table-hover table-bordered" style=" " id="itemList">
                                 <thead>
                                     <tr>
                                         <th>Action</th>
-                                        <th>#</th>
                                         <th style="color:#85929E;">Item Code</th>
                                         <th style="color:#85929E;">Item Name</th>
                                         <th style="color:#F97985;">Unit Price</th>
+                                        <th style="color:#F97985;">Unit Qty</th>
                                         <th style="color:#F97985;">Discount</th>
                                         <th style="color:#F97985;">Price </th>
                                     </tr>
                                 </thead>
-                                <tbody style="overflow-y: auto;">
+                                <tbody style="overflow-y: auto;" >
                                     <tr>
                                         <td>
-                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="fas fa-trash-alt fa-fw"></i></a>
+                                        <a href='javascript:void(0);'  class='delete' title='Delete' data-toggle='tooltip'><i class='fas fa-trash-alt fa-fw' ></i></a>
+                                            
                                         </td>
-                                        <td>1</td>
                                         <td>ABC1</td>
                                         <td>Name1</td>
-                                        <td>500</td>
                                         <td>50</td>
-                                        <td>450</td>
+                                        <td>10</td>
+                                        <td class="countableDis">10</td>
+                                        <td class="countablePrice">400</td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="fas fa-trash-alt fa-fw" ></i></a>
-                                        </td>
-                                        <td>2</td>
-                                        <td>ABC2</td>
-                                        <td>Name2</td>
-                                        <td>400</td>
-                                        <td>50</td>
-                                        <td>350</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="fas fa-trash-alt fa-fw"></i></a>
-                                        </td>
-                                        <td>3</td>
-                                        <td>ABC3</td>
-                                        <td>Name3</td>
-                                        <td>300</td>
-                                        <td>50</td>
-                                        <td>250</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="fas fa-trash-alt fa-fw"></i></a>
-                                        </td>
-                                        <td>4</td>
-                                        <td>ABC4</td>
-                                        <td>Name4</td>
-                                        <td>3000</td>
-                                        <td>500</td>
-                                        <td>2500</td>
-
-                                    </tr>
+                    
 
                                 </tbody>
                             </table>
@@ -236,7 +205,7 @@
                                         <lable for="totalDiscount" style="font-weight:bold; font-size:20px; color:#c2b315;">Total Discount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control " id="totalDiscount"></input>
+                                        <input type="number" class="form-control " id="totalDiscount"></input>
                                     </div>
                                 </div>
                                 <div class="row col-md-10 offset-md-4" style="margin-top:20px;">
@@ -244,7 +213,7 @@
                                         <lable for="totalAmount" style="font-weight:bold; font-size:20px; color:#F97985;">Total Amount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control " id="totalAmount"></input>
+                                        <input type="number" class="form-control " id="totalAmount"></input>
                                     </div>
                                 </div>
                                 </br>
@@ -253,7 +222,7 @@
                                         <lable for="payAmount" style="font-weight:bold; font-size:20px; color:#85929E;">Pay Amount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control payment" id="payAmount"></input>
+                                        <input type="number" class="form-control payment" id="payAmount"></input>
                                     </div>
                                 </div>
                                 </br>
@@ -262,7 +231,7 @@
                                         <lable for="totalBalance" style="font-weight:bold; font-size:20px; color:#2ECC71;">Balance</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" id="balance"></input>
+                                        <input type="number" class="form-control" id="balance"></input>
                                     </div>
                                 </div>
                             </div>
@@ -287,7 +256,7 @@
                                 </button>
                             </div>
                             <div class="col-md-6" style="">
-                                <button id="clearBtn" type="button" class="btn btn-danger waves-effect waves-light">
+                                <button id="clearBtn" type="button" class="btn btn-danger waves-effect waves-light" onclick="clearAlldata()">
                                     <i class="fas fa-times-circle fa-2x" ></i>
                                     <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Clear</span>
                                 </button>
@@ -317,18 +286,115 @@
 
 $(document).ready(function(){
 
+        document.getElementById("totalDiscount").disabled = true;
+        document.getElementById("totalAmount").disabled = true;
+        document.getElementById("balance").disabled = true;
 
-        $(".payment").keyup(function(){
-
-            var num1=$("totalAmount").val();
-            alert(num1);
-            var num2=$("payAmount").val();
-            var num3=parseInt(num2) - parseInt(num1);
-
-            $("balance").val(num3);
-
+         $('#payAmount').on('keyup', function() {
+            if($.trim(this.value).length) {
+                var balance =parseFloat(this.value).toFixed(2) - parseFloat($('#totalAmount').val()).toFixed(2); 
+                            
+                $('#balance').val(balance);
+            }
         });
+
+        var rows = "";
+        // function for adding data to sale table 
+        document.getElementById('add-btn').onclick = function AddData() {
+            var itemCode = document.getElementById("itemCode").value;
+            var itemName = document.getElementById("itemName").value;
+            var unitDiscount = document.getElementById("discount").value;
+            var unitPrice = document.getElementById("unitPrice").value;
+            var itemQty = document.getElementById("itemQty").value;
+
+            var discount=unitDiscount*itemQty;
+            var price=itemQty*(unitPrice-unitDiscount);
+            
+            console.log("discount", discount);
+            
+            
+
+            row = "<tr><td><a  class='delete' title='Delete' data-toggle='tooltip'><i class='fas fa-trash-alt fa-fw'></i></a></td><td>" + itemCode + "</td><td>" + itemName + "</td><td>"  + unitPrice + "</td><td>" + itemQty + "</td><td class='countableDis'> " + discount + "</td><td class='countablePrice'>"+price+"</td></tr>";
+            $(row).appendTo("#itemList tbody");
+
+            //calling Sum of Discounts(total Discount) function
+            calSumDis();
+            //calling Sum of price(total price) function
+            calSumPrice();
+
+            
+
+            document.getElementById('itemCode').value = '';
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemCat').value = '';
+            document.getElementById('discount').value = '';
+            document.getElementById('unitPrice').value = '';
+            document.getElementById('itemQty').value = '';
+   
+        }
+
+        
+
+        $(document).on('click','.delete',function(){
+
+            var result = confirm("Do you Want to delete this item?");
+            if (result) {
+                $(this).parent().parent().remove();
+
+                //calling Sum of Discounts(total Discount) function
+                calSumDis();
+                //calling Sum of price(total price) function
+                calSumPrice();
+            }    
+            
+    
+        });
+
+        document.getElementById('refresh-btn').onclick = function clearData() {
+            document.getElementById('itemCode').value = '';
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemCat').value = '';
+            document.getElementById('discount').value = '';
+            document.getElementById('unitPrice').value = '';
+            document.getElementById('itemQty').value = '';
+        
+        }
+
+        //Sum of Discounts(total Discount) function
+        function calSumDis(){
+            var cls = document.getElementById("itemList").getElementsByTagName("td");
+            var sum1 = 0;
+            for (var i = 0; i < cls.length; i++){
+                if(cls[i].className == "countableDis"){
+                    sum1 += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+                }
+            }
+            
+        document.getElementById('totalDiscount').value = sum1;
+        }
+
+        //Sum of price(total Price) function
+        function calSumPrice(){
+            var cls = document.getElementById("itemList").getElementsByTagName("td");
+            var sum2 = 0;
+            for (var i = 0; i < cls.length; i++){
+                if(cls[i].className == "countablePrice"){
+                    sum2 += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+                }
+            }
+            
+        document.getElementById('totalAmount').value = sum2;
+        }
+        
+      
+
 });
+
+//clear function for all datas in display(refresh the page)
+function clearAlldata(){
+    
+    location.reload();
+}
 
 
 </script>
