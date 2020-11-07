@@ -27,7 +27,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('sales', 'SalesController');
 
-    Route::resource('exchanges', 'ExchangesController');
+    Route::resource('returns', 'ReturnsController');
 
     Route::resource('customers', 'CustomersController');
 
