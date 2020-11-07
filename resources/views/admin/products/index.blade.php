@@ -20,29 +20,41 @@
         <div class="row">
             <div class="col-md-8 offset-sm-1">
                 <div class="row">
-                    <div class="col-md-2 control-label">
-                        <label for="itemCode" style="font-weight:bold; font-size:17px; color:#16A085;">Select
-                            Tags</label>
+                    <div class="col-md-2 control-label"></div>
+                    <div class="col-md-6">
+
+                        <div class="form-group {{ $errors->has('tags') ? 'has-error' : '' }}">
+                            <label for="tags" style="font-weight:bold; font-size:17px; color:#16A085;">
+                                Search by Tags:
+                                <span class="btn btn-info btn-xs deselect-all">Deselect all</span>
+                            </label>
+                            (Max=3)
+                            <select name="tags[]" id="tags" class="form-control select2"
+                                    multiple="multiple">
+                                @foreach($tags as $id => $tags)
+                                    <option
+                                        value="{{ $id }}">
+                                        {{ $tags}}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @if($errors->has('tags'))
+                                <em class="invalid-feedback">
+                                    {{ $errors->first('tags') }}
+                                </em>
+                            @endif
+                            <p class="helper-block">
+                                {{ trans('global.role.fields.permissions_helper') }}
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <select id="itemTag" name="itemTag" class="js-example-data-array select2-hidden-accessible"
-                                tabindex="-1" aria-hidden="true"></select><span
-                            class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span
-                                class="selection"><span class="select2-selection select2-selection--single"
-                                                        role="combobox" aria-haspopup="true" aria-expanded="false"
-                                                        tabindex="0" aria-labelledby="select2-sqvn-container"><span
-                                        class="select2-selection__rendered"></span></span><span
-                                    class="select2-selection__arrow" role="presentation"><b
-                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                                                                                           aria-hidden="true"></span>
-                    </div>
+                    <button id="btnSearch" type="button" class="btn btn-primary">
+                        <i class="fa fa-search fa"></i>
+{{--                        <span class="m-l-10" style="font-weight:bold; font-size:14px;"> Search</span>--}}
+                    </button>
                 </div>
             </div>
             <div class="col-md-2" style="margin-left:-100px">
-                <button id="btnSearch" type="button" class="btn btn-primary waves-effect waves-light">
-                    <i class="fas fa-search fa-2x"></i>
-                    <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Search</span>
-                </button>
 
 
             </div>
@@ -64,7 +76,7 @@
                             Action
                         </th>
                         <th width="08">
-                            No
+                            Code
                         </th>
                         <th>
                             {{ trans('global.product.fields.name') }}
@@ -72,11 +84,14 @@
                         <th>
                             {{ trans('global.product.fields.description') }}
                         </th>
-                        <th>
-                            {{ trans('global.product.fields.price') }}
+                        <th width="10">
+                            Unit Price
+                        </th>
+                        <th width="10">
+                            Quantity
                         </th>
                         <th>
-                            Price
+                            Controllers
                         </th>
                     </tr>
                     </thead>
@@ -84,10 +99,11 @@
                     @foreach($products as $key => $product)
                         <tr data-entry-id="{{ $product->id }}">
                             <td>
-                                <a href="#" class="view" title="View" data-toggle="tooltip"><i class="fas fa-eye-alt fa-fw"></i></a>
+                                <a href="#" class="view" title="View" data-toggle="tooltip"><i
+                                        class="fas fa-eye-alt fa-fw"></i></a>
                             </td>
                             <td>
-
+                                {{$product->item_code ?? ''}}
                             </td>
                             <td>
                                 {{ $product->name ?? '' }}
@@ -96,7 +112,10 @@
                                 {{ $product->description ?? '' }}
                             </td>
                             <td>
-                                {{ $product->price ?? '' }}
+                                {{ $product->unit_price ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->quantity ?? '' }}
                             </td>
                             <td>
                                 @can('product_show')

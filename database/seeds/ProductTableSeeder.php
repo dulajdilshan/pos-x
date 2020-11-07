@@ -26,6 +26,13 @@ class ProductTableSeeder extends Seeder
             'description' => 'Cotton, Male',
             'quantity' => 31,
             'unit_price' => 250.4,
+        ],[
+            'id' => 3,
+            'name' => 'White shirt',
+            'item_code' => 'XLEDTW',
+            'description' => 'Cotton, Female XL',
+            'quantity' => 20,
+            'unit_price' => 350,
         ]];
 
         Product::insert($products);
