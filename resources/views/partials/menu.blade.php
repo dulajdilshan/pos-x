@@ -53,6 +53,15 @@
                     {{ trans('global.sale.title') }}
                 </a>
             </li>
+{{--                            Exchanges--}}
+            <li class="nav-item">
+                <a href="{{ route("admin.exchanges.index") }}" class="nav-link {{ request()->is('admin/exchanges') || request()->is('admin/exchanges/*') ? 'active' : '' }}">
+                    <i class="fas fa-check-circle nav-icon">
+
+                    </i>
+                    Exchanges
+                </a>
+            </li>
 {{--                                Product--}}
             <li class="nav-item">
                 <a href="{{ route("admin.products.index") }}" class="nav-link {{ request()->is('admin/products') || request()->is('admin/products/*') ? 'active' : '' }}">

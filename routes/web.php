@@ -27,6 +27,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('sales', 'SalesController');
 
+    Route::resource('exchanges', 'ExchangesController');
+
     Route::resource('customers', 'CustomersController');
 
     Route::delete('suppliers/destroy', 'SuppliersController@massDestroy')->name('suppliers.massDestroy');
