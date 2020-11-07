@@ -53,13 +53,13 @@
                     {{ trans('global.sale.title') }}
                 </a>
             </li>
-{{--                            Exchanges--}}
+{{--                            Returns--}}
             <li class="nav-item">
-                <a href="{{ route("admin.exchanges.index") }}" class="nav-link {{ request()->is('admin/exchanges') || request()->is('admin/exchanges/*') ? 'active' : '' }}">
+                <a href="{{ route("admin.returns.index") }}" class="nav-link {{ request()->is('admin/returns') || request()->is('admin/returns/*') ? 'active' : '' }}">
                     <i class="fas fa-check-circle nav-icon">
 
                     </i>
-                    Exchanges
+                    Returns
                 </a>
             </li>
 {{--                                Product--}}
