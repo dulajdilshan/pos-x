@@ -1,13 +1,8 @@
 @extends('layouts.admin')
 @section('content')
 
-<style type="text/css">
-    body {
-        color: #566787;
-        background: #f5f5f5;
-		font-family: 'Roboto', sans-serif;
-	}
 
+<style type="text/css">
     table.table tr th, table.table tr td {
         border-color: #e9e9e9;
     }
@@ -47,56 +42,67 @@
         font-size: 95%;
     }
 
-    .card-inputs {
-
-    background-color: #cadee3;
-
-    }
-
     .card-table {
 
-    background-color: #e8c3d9;
+    background-color: #F8FBFB;
 
     }
     .card-billing {
 
-    background-color: #cadee3;
+    background-color: #338495;
 
     }
     .my-custom-scrollbar {
         position: relative;
-        height: 200px;
+        height: 500px;
         overflow: auto;
     }
     .table-wrapper-scroll-y {
         display: block;
     }
+
+    
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/custom.css') }}" />
+    
     
 </style>
 
 
 
-    <div class="card">
-        <div class="card-header">
-           <section class=inputs>
+    <div class="">
+        <div class="col-md-12">
+            <div class="row ">
+                <div class="col-1 text-sale">
+                    <label id="lblSale" class="hightlight">Sale</label>
+                </div>
+                <div class="col-1 text-exchange">
+                    <div class="custom-control custom-switch switch-secondary">
+                        <input type="checkbox" class="custom-control-input" id="saleSwitcher" unchecked> 
+                        <label id="lblExchange" class="custom-control-label" for="saleSwitcher">&nbsp;&nbsp;&nbsp;&nbsp;Exchange</label>
+                    </div>
+                </div>
+            </div>
+        </diV>
+        <div class="col-md-12">
+           <section class="inputs">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card card-inputs" style="margin-top: 20px;">
-                            <div  style="margin: 10px 10px 10px 10px;">
+                        <div class="card card-inputs">
+                            <div  class="card-inputs-content">
                                 <div class="row">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:28px; color:#2ECC71; font-family: Arial, Helvetica, sans-serif;">Bill No</lable>
+                                        <lable for="itemCode" class="billNo">Bill No </lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" id="billNo"></input>
+                                        <lable type="" class="billNo-value" id="billNo">00000</lable>
                                     </div>
-
                                 </div>
                                 </br>
+                                <hr color="#FBF8F8" class="hr-return"> 
                                 </br>
                                 <div class="row">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:18px; color:#34495E; font-family: Arial, Helvetica, sans-serif;">Item Code</lable>
+                                        <lable for="itemcode" class="item-code">Item Code</lable>
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemCode"></input>
@@ -106,7 +112,7 @@
                                 </br>
                                 <div class="row">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemName" style="font-weight:bold; font-size:15px; color:#85929E;">Item Name</lable>
+                                        <lable for="itemName" class="item-code">Item Name</lable>
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemName"></input>
@@ -114,7 +120,7 @@
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCat" style="font-weight:bold; font-size:15px; color:#85929E;">Item Tags</lable>
+                                        <lable for="itemCat" class="item-code">Item Tags </lable>
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" id="itemCat"></input>
@@ -122,7 +128,7 @@
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#F97985;">Unit Price</lable>
+                                        <lable for="itemCode" class="sale-details">Unit Price</lable>
                                     </div>
                                     <div class="col-md-4">
                                         <input type="number" class="form-control" id="unitPrice"></input>
@@ -131,7 +137,7 @@
                                 
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#F97985;">Item Qty</lable>
+                                        <lable for="itemCode" class="sale-details">Item Qty</lable>
                                     </div>
                                     <div class="col-md-4">
                                         <input type="number" class="form-control" id="itemQty"></input>
@@ -139,7 +145,7 @@
                                 </div>
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6 control-label">
-                                        <lable for="itemCode" style="font-weight:bold; font-size:15px; color:#F97985;">Discount</lable>
+                                        <lable for="itemCode" class="sale-details">Discount</lable>
                                     </div>
                                     <div class="col-md-4">
                                         <input type="number" class="form-control" id="discount"></input>
@@ -148,22 +154,59 @@
 
                                 </br>
                                 </br>
-                                <button type="button" id="add-btn" onclick="AddData()" class="btn btn-success waves-effect waves-light">
-                                    <i class="fas fa-plus-circle fa-2x" ></i>
-                                    <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Add</span>
-                                </button>
-                                &nbsp; &nbsp; &nbsp;
-                                <button type="button" id="refresh-btn" onclick="clearData()" class="btn btn-warning waves-effect waves-light">
-                                    <i class="fas fa-redo-alt fa-2x" style="color:white" ></i>
-                                    <span class="m-l-10" style="font-weight:bold; color:white; font-size:25px;"> Refresh</span>
-                                </button>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="button" id="add-btn" onclick="AddData()" class="btn btn-success btn-lg btn-block btn-style">
+                                            <i class="fas fa-plus-circle fa-sm" ></i>&nbsp;&nbsp;
+                                            <span> Add</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="button" id="refresh-btn" onclick="clearData()" class="btn btn-warning btn-lg btn-block btn-style">
+                                            <i class="fas fa-redo-alt fa-sm" style="color:white" ></i>&nbsp;&nbsp;
+                                            <span> Refresh</span>
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                
                             </div>
                         </div>
 
                     </div>
 
                     <div class="col-md-8">
-                        <div class="card card-table table-wrapper-scroll-y my-custom-scrollbar" style="margin-top: 20px;">
+                        <div class="card card-table table-wrapper-scroll-y my-custom-scrollbar">
+                            <table class="table" id="itemList">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Item Code</th>
+                                    <th scope="col">Item Name</th>
+                                    <th scope="col" style="color:#F97985;">Unit Price</th>
+                                    <th scope="col" style="color:#F97985;">Unit QTY</th>
+                                    <th scope="col" style="color:#F97985;">Disscount</th>
+                                    <th scope="col" style="color:#F97985;">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href='javascript:void(0);'  class='delete' title='Delete' data-toggle='tooltip'><i class='fas fa-trash-alt fa-fw' ></i></a>
+                                        </td>
+                                        <td>ABC1</td>
+                                        <td>T-Shirt</td>
+                                        <td>50</td>
+                                        <td>10</td>
+                                        <td class="countableDis">10</td>
+                                        <td class="countablePrice">400</td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                        </br>
+                        </br>
+                        <!-- <div class="card card-table table-wrapper-scroll-y my-custom-scrollbar" style="margin-top: 20px;">
                             <table class="table table-striped table-hover table-bordered" style=" " id="itemList">
                                 <thead>
                                     <tr>
@@ -193,85 +236,64 @@
 
                                 </tbody>
                             </table>
-                        </div>
-                        </br>
-                        </br>
+                        </div> -->
 
 
                         <div class="card card-billing" style="margin-top:-30px; " >
                             <div class="row" style="margin: 10px 10px 10px 10px;">
                                 <div class="row col-md-10 offset-md-4" style="">
                                     <div class="col-sm-4 control-label">
-                                        <lable for="totalDiscount" style="font-weight:bold; font-size:20px; color:#c2b315;">Total Discount</lable>
+                                        <lable for="totalDiscount" class="sale-total-details ">Total Discount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="number" class="form-control " id="totalDiscount"></input>
+                                        <input type="number" class="form-control input-text-style1 " id="totalDiscount"></input>
                                     </div>
                                 </div>
                                 <div class="row col-md-10 offset-md-4" style="margin-top:20px;">
                                     <div class="col-sm-4 control-label">
-                                        <lable for="totalAmount" style="font-weight:bold; font-size:20px; color:#F97985;">Total Amount</lable>
+                                        <lable for="totalAmount" class="sale-total-details">Total Amount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="number" class="form-control " id="totalAmount"></input>
+                                        <input type="number" class="form-control input-text-style2 " id="totalAmount"></input>
                                     </div>
                                 </div>
                                 </br>
                                 <div class="row col-md-10 offset-md-4" style="">
                                     <div class="col-sm-4 control-label">
-                                        <lable for="payAmount" style="font-weight:bold; font-size:20px; color:#85929E;">Pay Amount</lable>
+                                        <lable for="payAmount" class="sale-total-details">Pay Amount</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="number" class="form-control payment" id="payAmount"></input>
+                                        <input type="number" class="form-control payment input-text-style3" id="payAmount"></input>
                                     </div>
                                 </div>
                                 </br>
                                 <div class="row col-md-10 offset-md-4" style="">
                                     <div class="col-sm-4 control-label">
-                                        <lable for="totalBalance" style="font-weight:bold; font-size:20px; color:#2ECC71;">Balance</lable>
+                                        <lable for="totalBalance" class="sale-total-details">Balance</lable>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="number" class="form-control" id="balance"></input>
+                                        <input type="number" class="form-control input-text-style4" id="balance"></input>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         </br>
-
-
-
-
-
                     </div>
-
-                    <div class="row col-sm-12">
-                        <div class="col-sm-8">
-                        </div>
-
-                        <div class=" row col-sm-4 ">
-                            <div class="col-md-6" style="">
-                                <button id="printBtn" type="button" class="btn btn-primary waves-effect waves-light" >
-                                    <i class="fas fa-print fa-2x" ></i>
-                                    <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Print</span>
-                                </button>
-                            </div>
-                            <div class="col-md-6" style="">
-                                <button id="clearBtn" type="button" class="btn btn-danger waves-effect waves-light" onclick="clearAlldata()">
-                                    <i class="fas fa-times-circle fa-2x" ></i>
-                                    <span class="m-l-10" style="font-weight:bold; font-size:25px;"> Clear</span>
-                                </button>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-
-
-
                 </div>
+                <div class="">
+                    <div class="row justify-content-end">
+                        <div class="col-md-1" style="">
+                            <button id="printBtn" type="button" class="btn btn-primary waves-effect waves-light btn-style-sale" >
+                                <i class="fas fa-print fa-sm" ></i>&nbsp;&nbsp;Print
+                            </button>
+                        </div>
+                        <div class="col-md-1" style="">
+                            <button id="clearBtn" type="button" class="btn btn-danger waves-effect waves-light btn-style-sale" onclick="clearAlldata()">
+                                <i class="fas fa-times-circle fa-sm" ></i>&nbsp;&nbsp;Clear
+                            </button>
+                        </div>
+                    </div>
+                </div></br></br>
 
            </section>
         </div>
@@ -386,7 +408,21 @@ $(document).ready(function(){
         document.getElementById('totalAmount').value = sum2;
         }
         
-      
+    $('#saleSwitcher').click(function()  {
+
+        
+        if(this.checked)    {
+            $('#lblExchange').addClass('hightlight'); 
+            $('#lblSale').removeClass('hightlight');
+        }
+        else    {
+            
+            $('#lblSale').addClass('hightlight'); 
+            $('#lblExchange').removeClass('hightlight');
+        }
+
+    });
+        
 
 });
 
@@ -397,7 +433,10 @@ function clearAlldata(){
 }
 
 
+
 </script>
+
+
 
 
 

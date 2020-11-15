@@ -88,3 +88,266 @@ table.dataTable thead .sorting_desc {
     line-height: 1.5;
     border-radius: 3px;
 }
+
+
+/* CSS for returns */
+body {
+    /* color: #566787;
+    background: #f5f5f5;
+    font-family: 'Roboto', sans-serif; */
+}
+
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table td:last-child {
+    width: 100px;
+}
+table.table td a {
+    color: #a0a5b1;
+    display: inline-block;
+    margin: 0 5px;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+.pagination {
+    float: right;
+    margin: 0 0 5px;
+}
+
+.hint-text {
+    float: left;
+    margin-top: 6px;
+    font-size: 95%;
+}
+
+.card-inputs {
+
+background-color: #338495;
+margin-top: 20px;
+
+}
+.card-inputs-content{
+    margin: 20px;
+}
+
+
+.card-billing {
+
+background-color: #cadee3;
+
+}
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.billNo{
+    font-weight:bold;
+    font-size:28px;
+    color:#241335;
+    font-family: 'Roboto', sans-serif;
+}
+.billNo-value{
+    font-weight:bold;
+    font-size:28px;
+    color:#FBF8F8;
+    font-family: 'Roboto', sans-serif;
+
+}
+.topic-for-return{
+    font-weight:500;
+    font-size:18px; 
+    color:#FBF8F8;
+    font-family: 'Roboto', sans-serif;
+}
+.hr-return{
+    margin-top: 0.1rem !important;
+}
+.return-bill-no{
+    
+    font-size:18px; 
+    color:#FBF8F8;
+    font-family: 'Roboto', sans-serif;
+}
+.topic-for-purchased{
+    font-weight:400;
+    font-size:16px; 
+    color:#FBF8F8;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.purchased-details{
+    font-weight:400;
+    font-size:14px; 
+    color:#FBF8F8;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+.card-table{
+    background-color: #F8FBFB;
+    margin-top: 20px;
+}
+.tbl-btn-color{
+    background-color: #338495;
+}
+.custom-height{
+    height: 25px !important;
+    padding-top: 0.375rem ;
+    padding-right: 0.25rem  !important;
+    padding-bottom: 0.375rem;
+    padding-left: 0.25rem  !important;
+    margin-left: -24px !important;
+}
+.button, input, optgroup, select, textarea {
+    font-family: 'Roboto', sans-serif !important;
+}
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+.fa-trash-o{
+    color:#f86c6b;
+}
+.aligh-right{
+    align:right;
+}
+
+/* //CSS for sales page */
+
+.item-code{
+    font-size:18px; 
+    color:#FBF8F8 !important;
+    font-family: 'Roboto', sans-serif;
+}
+.sale-details{
+    font-weight:700;
+    font-size:16px; 
+    color:#fa5959;
+    text-shadow: 0 0 3px #000;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+.btn-style{
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+.btn-style :before{
+    color: white !important;
+}
+
+.sale-total-details{
+    font-weight:700;
+    font-size:20px; 
+    color:#fff;
+    text-shadow: 0 0 3px #000;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+.input-text-style1{
+    font-weight:500;
+    font-size:20px; 
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+.input-text-style2{
+    font-weight:700;
+    font-size:22px; 
+    color:#fa5959;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+.input-text-style3{
+    font-weight:500;
+    font-size:20px; 
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+
+}
+.input-text-style4{
+    font-weight:700;
+    font-size:22px; 
+    color:rgb(16, 161, 113);
+    font-family: 'Roboto', sans-serif;
+
+}
+.btn-style-sale{
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    height: 70px;
+
+
+}
+.text-sale{
+    text-align: end;
+    font-size: 16px;
+    font-size: 500;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(139, 139, 139);
+}
+.text-exchange{
+    text-align: start;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 500;
+    color: rgb(139, 139, 139);
+}
+.switch-style{
+    text-align: center;
+    height: 30px;
+
+}
+.hightlight { 
+    font-weight: bold;
+    color:#E34724;
+    
+}
