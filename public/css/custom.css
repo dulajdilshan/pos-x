@@ -338,7 +338,7 @@ background-color: #cadee3;
     text-align: start;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    font-size: 500;
+    font-weight: 500;
     color: rgb(139, 139, 139);
 }
 .switch-style{
@@ -350,4 +350,19 @@ background-color: #cadee3;
     font-weight: bold;
     color:#E34724;
     
+}
+
+.btn2-style{
+    text-align: end;
+}
+.lbl-return-style{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.lbl-return-style2{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #338495;
 }

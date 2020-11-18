@@ -124,7 +124,7 @@
                                     <tr>
                                         <th scope="row">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1" value="">
+                                                <input type="checkbox" class="custom-control-input return-checkbox" id="customCheck1" value="1">
                                                 <label class="custom-control-label" for="customCheck1">1</label>
                                             </div>
                                         </th>
@@ -135,7 +135,7 @@
                                         <td>5000.00</td>
                                         <td>
                                             <div class="custom-control ">
-                                                <input type="number" class="form-control custom-height" id="returnQty">
+                                                <input type="number" class="form-control custom-height return-qty" disabled>
                                                
                                             </div> 
                                         </td>
@@ -143,7 +143,7 @@
                                     <tr>
                                         <th scope="row">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2" value="">
+                                                <input type="checkbox" class="custom-control-input return-checkbox" id="customCheck2" value="1">
                                                 <label class="custom-control-label" for="customCheck2">2</label>
                                             </div>
                                         </th>
@@ -154,7 +154,7 @@
                                         <td>9500.00</td>
                                         <td>
                                             <div class="custom-control ">
-                                                <input type="number" class="form-control custom-height" id="returnQty">
+                                                <input type="number" class="form-control custom-height return-qty" disabled >
                                                
                                             </div> 
                                         </td>
@@ -162,7 +162,7 @@
                                     <tr>
                                         <th scope="row">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck3" value="">
+                                                <input type="checkbox" class="custom-control-input return-checkbox" id="customCheck3" value="1">
                                                 <label class="custom-control-label" for="customCheck3">3</label>
                                             </div>
                                         </th>
@@ -173,8 +173,7 @@
                                         <td>4000.00</td>
                                         <td>
                                             <div class="custom-control ">
-                                                <input type="number" class="form-control custom-height" id="returnQty">
-                                               
+                                                <input type="number" class="form-control custom-height return-qty" disabled>
                                             </div> 
                                         </td>
                                     </tr>
@@ -182,7 +181,7 @@
                             </table>
                         </div>
                         <div class="">
-                            <button id="searchReturnBill" type="button" class="btn btn-primary btn-lg btn-block tbl-btn-color"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Add To Return Items</button>
+                            <button id="btn-addTo-returnList" type="button" class="btn btn-primary btn-lg btn-block tbl-btn-color"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Add To Return Items</button>
                         </div>
                         <div class="card card-table table-wrapper-scroll-y my-custom-scrollbar">
                             <table class="table" id="returnItemList">
@@ -199,30 +198,26 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">
-                                            <div class="custom-control custom-checkbox">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </div>
-                                        </th>
+                                        <td>
+                                            <a href='javascript:void(0);'  class='delete' title='Delete' data-toggle='tooltip'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        </td>
                                         <td>ABC1</td>
                                         <td>T-Shirt</td>
                                         <td>1000.00</td>
                                         <td>1000.00</td>
-                                        <td>2</td>
-                                        <td>5000.00</td>
+                                        <td class="countableQty">5</td>
+                                        <td class="countablePrice">5000</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">
-                                            <div class="custom-control custom-checkbox">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </div>
-                                        </th>
+                                        <td>
+                                            <a href='javascript:void(0);'  class='delete' title='Delete' data-toggle='tooltip'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        </td>
                                         <td>ABC2</td>
                                         <td>Pant</td>
                                         <td>2000.00</td>
                                         <td>1900.00</td>
-                                        <td>2</td>
-                                        <td>3800.00</div> 
+                                        <td class="countableQty">2</td>
+                                        <td class="countablePrice">3800</div> 
                                         </td>
                                     </tr>
                                     
@@ -231,14 +226,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="">
-                    <div class="row justify-content-end">
-                        <div class="col-md-1">
+                <div class="row">
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <lable class="lbl-return-style">Total Value of Returns :</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <lable class="lbl-return-style2 " id="lbl_totalRetVal"></lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <lable class="lbl-return-style">Total no.of Return Items :</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <lable class="lbl-return-style2 " id="lbl_totalRetQty"></lable>
+                    </div>
+                    <div class="col-md-2 justify-content-between btn2-style">
+                        
                             <button id="searchReturnBill" type="button" class="btn btn-outline-success aligh-right"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
-                        </div>
-                        <div class="col-md-1">
+                        
+                        
                             <button id="searchReturnBill" type="button" class="btn btn-outline-danger aligh-right"><i class="fa fa-times" aria-hidden="true"></i> Clear</button>
-                        </div>
+                        
                     </div>
                 </div>
            </section>
@@ -254,105 +259,160 @@
 
 $(document).ready(function(){
 
-        document.getElementById("totalDiscount").disabled = true;
-        document.getElementById("totalAmount").disabled = true;
-        document.getElementById("balance").disabled = true;
+        // document.getElementById("totalDiscount").disabled = true;
+        // document.getElementById("totalAmount").disabled = true;
+        // document.getElementById("balance").disabled = true;
 
-         $('#payAmount').on('keyup', function() {
-            if($.trim(this.value).length) {
-                var balance =parseFloat(this.value).toFixed(2) - parseFloat($('#totalAmount').val()).toFixed(2); 
+        //  $('#payAmount').on('keyup', function() {
+        //     if($.trim(this.value).length) {
+        //         var balance =parseFloat(this.value).toFixed(2) - parseFloat($('#totalAmount').val()).toFixed(2); 
                             
-                $('#balance').val(balance);
+        //         $('#balance').val(balance);
+        //     }
+        // });
+
+        // var rows = "";
+        // // function for adding data to sale table 
+        // document.getElementById('add-btn').onclick = function AddData() {
+        //     var itemCode = document.getElementById("itemCode").value;
+        //     var itemName = document.getElementById("itemName").value;
+        //     var unitDiscount = document.getElementById("discount").value;
+        //     var unitPrice = document.getElementById("unitPrice").value;
+        //     var itemQty = document.getElementById("itemQty").value;
+
+        //     var discount=unitDiscount*itemQty;
+        //     var price=itemQty*(unitPrice-unitDiscount);
+            
+        //     console.log("discount", discount);
+            
+            
+            function addSelectedReturnData(){
+                row = "<tr><td><a href='javascript:void(0);'  class='delete' title='Delete' data-toggle='tooltip'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td><td>" + itemCode + "</td><td>" + itemName + "</td><td>"  + unitPrice + "</td><td>" + itemQty + "</td><td class='countableDis'> " + discount + "</td><td class='countablePrice'>"+price+"</td></tr>";
+                $(row).appendTo("#itemList tbody");
             }
-        });
 
-        var rows = "";
-        // function for adding data to sale table 
-        document.getElementById('add-btn').onclick = function AddData() {
-            var itemCode = document.getElementById("itemCode").value;
-            var itemName = document.getElementById("itemName").value;
-            var unitDiscount = document.getElementById("discount").value;
-            var unitPrice = document.getElementById("unitPrice").value;
-            var itemQty = document.getElementById("itemQty").value;
+            //<a href='javascript:void(0);'  class='delete' title='Delete' data-toggle='tooltip'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 
-            var discount=unitDiscount*itemQty;
-            var price=itemQty*(unitPrice-unitDiscount);
-            
-            console.log("discount", discount);
-            
-            
+        //     row = "<tr><td><a  class='delete' title='Delete' data-toggle='tooltip'><i class='fas fa-trash-alt fa-fw'></i></a></td><td>" + itemCode + "</td><td>" + itemName + "</td><td>"  + unitPrice + "</td><td>" + itemQty + "</td><td class='countableDis'> " + discount + "</td><td class='countablePrice'>"+price+"</td></tr>";
+        //     $(row).appendTo("#itemList tbody");
 
-            row = "<tr><td><a  class='delete' title='Delete' data-toggle='tooltip'><i class='fas fa-trash-alt fa-fw'></i></a></td><td>" + itemCode + "</td><td>" + itemName + "</td><td>"  + unitPrice + "</td><td>" + itemQty + "</td><td class='countableDis'> " + discount + "</td><td class='countablePrice'>"+price+"</td></tr>";
-            $(row).appendTo("#itemList tbody");
-
-            //calling Sum of Discounts(total Discount) function
-            calSumDis();
-            //calling Sum of price(total price) function
-            calSumPrice();
+        //     //calling Sum of Discounts(total Discount) function
+        //     calSumDis();
+        //     //calling Sum of price(total price) function
+        //     calSumPrice();
 
             
 
-            document.getElementById('itemCode').value = '';
-            document.getElementById('itemName').value = '';
-            document.getElementById('itemCat').value = '';
-            document.getElementById('discount').value = '';
-            document.getElementById('unitPrice').value = '';
-            document.getElementById('itemQty').value = '';
+        //     document.getElementById('itemCode').value = '';
+        //     document.getElementById('itemName').value = '';
+        //     document.getElementById('itemCat').value = '';
+        //     document.getElementById('discount').value = '';
+        //     document.getElementById('unitPrice').value = '';
+        //     document.getElementById('itemQty').value = '';
    
-        }
+        // }
 
         
 
         $(document).on('click','.delete',function(){
 
             var result = confirm("Do you Want to delete this item?");
-            if (result) {
-                $(this).parent().parent().remove();
+                if (result) {
+                    $(this).parent().parent().remove();
 
-                //calling Sum of Discounts(total Discount) function
-                calSumDis();
-                //calling Sum of price(total price) function
-                calSumPrice();
-            }    
+                    
+                    //calling Sum of price(total price) function
+                    calSumofPrice();
+                    calSumofReturnQTY();
+                }    
             
     
         });
 
-        document.getElementById('refresh-btn').onclick = function clearData() {
-            document.getElementById('itemCode').value = '';
-            document.getElementById('itemName').value = '';
-            document.getElementById('itemCat').value = '';
-            document.getElementById('discount').value = '';
-            document.getElementById('unitPrice').value = '';
-            document.getElementById('itemQty').value = '';
         
+        document.getElementById('btn-addTo-returnList').onclick = function addReturnData(){
+
+        
+            calSumofPrice(); 
+            calSumofReturnQTY();
+
         }
 
-        //Sum of Discounts(total Discount) function
-        function calSumDis(){
-            var cls = document.getElementById("itemList").getElementsByTagName("td");
+        function calSumofPrice(){
+            var cls = document.getElementById("returnItemList").getElementsByTagName("td");
             var sum1 = 0;
             for (var i = 0; i < cls.length; i++){
-                if(cls[i].className == "countableDis"){
+                if(cls[i].className == "countablePrice"){
                     sum1 += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
                 }
             }
-            
-        document.getElementById('totalDiscount').value = sum1;
+             console.log(sum1);  
+            $('#lbl_totalRetVal').html(sum1.toFixed(2));
+
         }
 
-        //Sum of price(total Price) function
-        function calSumPrice(){
-            var cls = document.getElementById("itemList").getElementsByTagName("td");
+        function calSumofReturnQTY(){
+            var cls = document.getElementById("returnItemList").getElementsByTagName("td");
             var sum2 = 0;
             for (var i = 0; i < cls.length; i++){
-                if(cls[i].className == "countablePrice"){
+                if(cls[i].className == "countableQty"){
                     sum2 += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
                 }
             }
-            
-        document.getElementById('totalAmount').value = sum2;
+             console.log(sum2);  
+            $('#lbl_totalRetQty').html(sum2);
+
         }
+
+        // document.getElementById('refresh-btn').onclick = function clearData() {
+        //     document.getElementById('itemCode').value = '';
+        //     document.getElementById('itemName').value = '';
+        //     document.getElementById('itemCat').value = '';
+        //     document.getElementById('discount').value = '';
+        //     document.getElementById('unitPrice').value = '';
+        //     document.getElementById('itemQty').value = '';
+        
+        // }
+
+        // //Sum of Discounts(total Discount) function
+        // function calSumDis(){
+        //     var cls = document.getElementById("itemList").getElementsByTagName("td");
+        //     var sum1 = 0;
+        //     for (var i = 0; i < cls.length; i++){
+        //         if(cls[i].className == "countableDis"){
+        //             sum1 += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+        //         }
+        //     }
+            
+        // document.getElementById('totalDiscount').value = sum1;
+        // }
+
+        // //Sum of price(total Price) function
+        // function calSumPrice(){
+        //     var cls = document.getElementById("itemList").getElementsByTagName("td");
+        //     var sum2 = 0;
+        //     for (var i = 0; i < cls.length; i++){
+        //         if(cls[i].className == "countablePrice"){
+        //             sum2 += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+        //         }
+        //     }
+            
+        // document.getElementById('totalAmount').value = sum2;
+        // }
+        
+
+        $('.return-checkbox').on('change', function() {
+            console.log ($(this).closest('tr').find('.return-qty'));
+           
+            // $(this).parent().parent().parent().find('.return-qty').prop("disabled", false);
+            if ($(this).prop('checked')){
+                $(this).closest('tr').find('.return-qty').prop("disabled", false);
+            }else
+            {
+                $(this).closest('tr').find('.return-qty').prop("disabled", true);
+                $(this).closest('tr').find('.return-qty').val(''); 
+            }
+        });
         
       
 

@@ -162,7 +162,7 @@
                                         </button>
                                     </div>
                                     <div class="col-md-6">
-                                        <button type="button" id="refresh-btn" onclick="clearData()" class="btn btn-warning btn-lg btn-block btn-style">
+                                        <button type="button" id="refresh-btn" onclick="clearData()" class="btn btn-danger btn-lg btn-block btn-style">
                                             <i class="fas fa-redo-alt fa-sm" style="color:white" ></i>&nbsp;&nbsp;
                                             <span> Refresh</span>
                                         </button>
